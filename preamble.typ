@@ -11,6 +11,8 @@
   cea-list-style: true,
   lang: "fr",
 
+  footer_txt: "Auteur du document : ",
+
   color_main: rgb("#ace1ff"), // does nothing, couldnt figure out how to add it to tables
   color_secondary: gray.lighten(65%),
   color_rule: rgb("#00a0ff"),
@@ -49,7 +51,7 @@
           stroke: (x, y) => (
             top: if y == 0 { (1.5pt + color_secondary) } else { none },
           ),
-          text(fill: color_secondary.darken(20%))[Document author : #author],
+          text(fill: color_secondary.darken(20%))[#footer_txt#author],
           context here().page(),
           text(fill: color_secondary.darken(20%))[#date.display()],
         )

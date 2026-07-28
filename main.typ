@@ -28,9 +28,12 @@
   distribution_limited: false,
 )
 #show: cea-theme.with(
-  title: _title,
-  author: _author,
+  // put those in boxes else treesitter is acting weird
+  title: [#_title],
+  author: [#_author],
   outline_title: "Sommaire",
+  footer_txt: "Document author: ",
+
   list_tables: true,
   list_figs: true,
   list_tables_name: "List of tables",
