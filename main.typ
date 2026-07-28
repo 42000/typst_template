@@ -90,15 +90,3 @@ This will get reference at the end
   [ok],[lol],[ok],
   [ok],[lol],[ok],
 )
-fuck is this
-this does not work now
-keewew
-ok 
-je suis 
-je 
-je jej je
-je 
-e j
-je sss
-je 
-ooooo
