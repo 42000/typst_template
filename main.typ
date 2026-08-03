@@ -5,7 +5,7 @@
 
 // Variable globales du document
 #let _title = "Sample Title"
-#let _subtitle = "sample subtitle"
+#let _subtitle = "Sample subtitle"
 #let _author = "Tim SICARD"
 #show "TBD" : it => { tbd[#it] }
 
@@ -40,6 +40,7 @@
   list_figs_name: "List of figures",
 
   logo_l: image("assets/KUL.png", height: 60%),
+  logo_r: [],
   color_rule: rgb("#00a0ff"),
 )
 

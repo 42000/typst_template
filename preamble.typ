@@ -194,9 +194,11 @@
     #show title: set align(center)
     #show title: smallcaps
     #align(horizon)[
-      #title[#_title]
-      #title[#_subtitle]
-      #align(center)[#datetime.today().display()]
+      #title[#_title]#v(-0.25em)
+      #align(center)[
+        #text(size: 1.75em)[#_subtitle]\
+        #v(0.8em)#datetime.today().display()
+      ]
     ]
     #align(bottom)[
       #grid(
