@@ -17,7 +17,7 @@
   logo_l: image("assets/KUL.png", width: 13em),
   logo_r: image("assets/cesi.jpg", width: 10em),
   text_l : [
-    Another collaborator\
+    #_author\
     CEA/DRF/Irfu/DIS/LEI
   ],
   text_r: [
@@ -26,12 +26,14 @@
   ],
   distribution_header: true,
   distribution_limited: false,
+  distribution_txt_limited : [Limited],
+  distribution_txt_open : [Open access],
 )
 #show: cea-theme.with(
   // put those in boxes else treesitter is acting weird
   title: [#_title],
   author: [#_author],
-  outline_title: "Sommaire",
+  outline_title: "Table of contents",
   footer_txt: "Document author: ",
 
   list_tables: true,

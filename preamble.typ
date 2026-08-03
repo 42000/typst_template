@@ -1,6 +1,7 @@
 #import "@preview/shadowed:0.3.0": *
 
-#let color_table_header = rgb("#ace1ff")
+#let color_table_header = rgb("#ACE1FF") // <-- KUL cool blue
+// #let color_table_header = rgb("#FFFF99") // <-- CEA/CESI hot yellow
 #let cea-theme(
   title: [],
   author: (),
@@ -18,7 +19,7 @@
   color_rule: rgb("#00a0ff"),
 
   show_outline: true,
-  outline_title: "Contents",
+  outline_title: "Sommaire",
   list_tables: true,
   list_figs: true,
   list_tables_name: "Liste des tableaux",
@@ -172,6 +173,7 @@
   logo_l : none,
   logo_r : none,
   text_l : [
+    Auteur\
     CEA/DRF/Irfu/DIS/LEI
   ],
   text_r : [
@@ -180,8 +182,8 @@
   ],
   distribution_header : true,
   distribution_limited : false,
-  distribution_txt_limited : [Limited],
-  distribution_txt_open : [Open access],
+  distribution_txt_limited : [Limitée],
+  distribution_txt_open : [Libre],
 ) = {
   page[
     #grid(
@@ -205,7 +207,7 @@
         columns: (1fr, 1fr),
         align: (left+top, right+top),
         rows: (auto, 40pt),
-        if author != none and text_l != none {[#author\ #text_l]} else {none},
+        text_l,
         text_r,
       )
       #if distribution_header {
