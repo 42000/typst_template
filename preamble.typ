@@ -163,7 +163,6 @@
   highlight(fill: rgb(255, 255, 0))[#text(weight: "bold")[#content]]
 }
 
-
 //======== PAGE DE GARDE
 #let page_garde(
   _title : none,
