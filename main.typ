@@ -69,14 +69,7 @@ ordered list :
 + lol
 + ok
 
-inline code : ```bash sudo rm -rf --no-preserve-root /```
-
-#listing(caption: [ouga])[
-```python
-import os
-
-remove os
-```]
+inline code : ```bash sudo rm -rf --no-preserve-root /```\
 les listings marchent, en mode swag
 #listing(caption: [lol])[
 ```python
@@ -106,7 +99,7 @@ def multi_extract(
 ```
 ]
 // I need to fix this
-#listing(caption: [importing from file])[#raw(read("preamble.typ"),lang:"typst"))]
+#listing(caption: [importing from file])[#raw(read("assets/example_script.py"),lang:"python")]
 #figure(
   image("assets/KUL.png"),
   caption: [figure example]

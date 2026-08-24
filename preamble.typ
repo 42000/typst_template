@@ -81,6 +81,7 @@
             #it.body ],
       )
     }
+    show figure: set block(breakable: true)
     show heading.where(level: 1): it => {
       set text(size: 14pt, tracking: -0.9pt)
       stack(
