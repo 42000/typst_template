@@ -22,8 +22,10 @@
   outline_title: "Sommaire",
   list_tables: true,
   list_figs: true,
+  list_code: false,
   list_tables_name: "Liste des tableaux",
   list_figs_name: "Table des figures",
+  list_code_name: "Table des listing",
 
   logo_l: none,
   logo_r: none,
@@ -121,6 +123,12 @@
               title: none,
               target: figure.where(kind: table),
             )}
+          #if list_code {
+            heading(numbering: none)[#list_code_name]
+            outline(
+              title: none,
+              target: figure.where(kind: raw),
+            )}
           ]
         }
       }
@@ -162,6 +170,25 @@
 #let tbd(content) = {
   highlight(fill: rgb(255, 255, 0))[#text(weight: "bold")[#content]]
 }
+#let listing(
+  ..it,
+  caption: [],
+) = {
+  figure(
+    block(
+      breakable: true,
+      fill:gray.lighten(85%),
+      inset:1.5em,
+      width:99%,
+      align(left)[#text(0.95em,
+        ..it
+      )]
+    ),
+    caption: figure.caption(
+      position: top,
+      caption
+    ),
+  )}
 
 //======== PAGE DE GARDE
 #let page_garde(

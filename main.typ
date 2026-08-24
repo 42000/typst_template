@@ -38,15 +38,16 @@
 
   list_tables: true,
   list_figs: true,
+  list_code: true,
   list_tables_name: "List of tables",
   list_figs_name: "List of figures",
+  list_code_name: "Table of listing",
 
   logo_l: image("assets/KUL.png", height: 60%),
   logo_r: [],
   color_rule: rgb("#00a0ff"),
 )
 
-#show raw.where(lang:"zsh"): it=>{block(fill:rgb("#eeeeee"),inset:1.5em,width:99%,text(0.83em, it))}
 //================ EVERYTHING FROM HERE CAN BE REMOVED
 #heading(numbering: none)[Summary]
 
@@ -70,17 +71,42 @@ ordered list :
 
 inline code : ```bash sudo rm -rf --no-preserve-root /```
 
-code block (can be configured for automatic) :
-#block(
-fill:rgb("#eeeeee"),inset:1.5em,width:99%,text(0.83em,
-[
-  ```python
-  import os
+#listing(caption: [ouga])[
+```python
+import os
 
-  def main()
-    os.remove()
-  ```
-]))
+remove os
+```]
+les listings marchent, en mode swag
+#listing(caption: [lol])[
+```python
+import os
+
+# Extract multiple sets of frames
+def multi_extract(
+  directory : str
+) -> tuple[ArrayLike, ArrayLike]:
+  """Function to extract all fits files in different folders under a directory.
+
+  Args:
+  directory (str): path of the directory
+
+  Returns:
+  tuple[ArrayLike, ArrayLike]: returns a list of all the sets of frames and headers.
+  """
+  set_frames = []
+  set_headers = []
+  path_names = glob.glob(f"{directory}/*")
+  for path in path_names:
+    if path.endswith("ms"):
+      frames, headers = extract(path)
+      set_frames.append(frames)
+      set_headers.append(headers)
+  return set_frames, set_headers
+```
+]
+// I need to fix this
+#listing(caption: [importing from file])[#raw(read("preamble.typ"),lang:"typst"))]
 #figure(
   image("assets/KUL.png"),
   caption: [figure example]
